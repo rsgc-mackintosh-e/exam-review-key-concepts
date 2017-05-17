@@ -24,6 +24,32 @@ import PlaygroundSupport
 let canvas = Canvas(width: 400, height: 600)
 
 
+canvas.fillColor = Color.init(hue: 121, saturation: 55, brightness: 73, alpha: 100)
+
+canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 0, width: 400, height: 600)
+
+
+canvas.drawShapesWithBorders = false
+
+canvas.fillColor = Color.black
+canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 0, width: 400, height: 400)
+
+canvas.fillColor = Color.init(hue: 121, saturation: 55, brightness: 73, alpha: 100)
+
+
+for x in stride(from: 0, through: 400, by: 40) {
+    for y in stride(from: 0, through: 400, by: 40){
+        
+        canvas.drawEllipse(centreX: x, centreY: y, width: 35, height: 35)
+        canvas.drawText(message: String(x), size: 7, x: x, y: y)
+        canvas.drawText(message: String(y), size: 7, x: x, y: y-10)
+
+        
+    }
+}
+
+
+
 //: ## Template code
 //: The code below is necessary to see the result of your work in the Assistant Editor at right. Please do not remove.
 PlaygroundPage.current.liveView = canvas.imageView
