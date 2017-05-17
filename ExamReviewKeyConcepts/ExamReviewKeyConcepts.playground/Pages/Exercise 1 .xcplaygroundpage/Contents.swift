@@ -23,6 +23,36 @@ import PlaygroundSupport
 // Create a new canvas
 let canvas = Canvas(width: 400, height: 600)
 
+//set the background color
+canvas.fillColor = Color.init(hue: 190, saturation: 87, brightness: 93, alpha: 100)
+//Draw big rectangle for background
+canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 0, width: 400, height: 600)
+
+//Set text color and transparency
+canvas.textColor = Color.init(hue: 0, saturation: 0, brightness: 0, alpha: 120)
+
+for y in stride(from: -50, through: 310, by: 10){
+  canvas.drawText(message: "blur", size: 200, x: 10, y: y, kerning: 0)
+}
+canvas.textColor = Color.black
+
+canvas.drawText(message: "blur", size: 200, x: 10, y: 280, kerning: 0)
+
+
+//Write the date
+canvas.drawText(message: "saturday", size: 10, x: 20, y: 570, kerning: 0)
+canvas.drawText(message: "october 16 1993 / 8pm", size: 10, x: 20, y: 560, kerning: 0)
+
+//Write the location
+canvas.drawText(message: "mandela hall", size: 10, x: 140, y: 570, kerning: 0)
+canvas.drawText(message: "at university of sussex", size: 10, x: 140, y: 560, kerning: 0)
+
+//Writing the performers
+canvas.drawText(message: "special guest", size: 10, x: 260, y: 570, kerning: 0)
+canvas.drawText(message: "salad, plus my life story", size: 10, x: 260, y: 560, kerning: 0)
+
+//Write the cost
+canvas.drawText(message: "￡6.50/￡5.50 advance", size: 10, x: 260, y: 540, kerning: 0)
 
 //: ## Template code
 //: The code below is necessary to see the result of your work in the Assistant Editor at right. Please do not remove.
