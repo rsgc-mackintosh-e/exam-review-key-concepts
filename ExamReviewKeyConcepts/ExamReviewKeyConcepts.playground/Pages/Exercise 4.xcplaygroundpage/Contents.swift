@@ -23,32 +23,45 @@ import PlaygroundSupport
 // Create a new canvas
 let canvas = Canvas(width: 400, height: 600)
 
-
+//Set the background color
 canvas.fillColor = Color.init(hue: 121, saturation: 55, brightness: 73, alpha: 100)
 
 canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 0, width: 400, height: 600)
 
 
+//Draw a black rectangle BEFORE the circles
 canvas.drawShapesWithBorders = false
 
 canvas.fillColor = Color.black
 canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 0, width: 400, height: 400)
 
-canvas.fillColor = Color.init(hue: 121, saturation: 55, brightness: 73, alpha: 100)
+
+
 
 
 for x in stride(from: 0, through: 400, by: 40) {
     for y in stride(from: 0, through: 400, by: 40){
         
+        //Set the color to match that of the background
+        canvas.fillColor = Color.init(hue: 121, saturation: 55, brightness: 73, alpha: 100)
+        
         canvas.drawEllipse(centreX: x, centreY: y, width: 35, height: 35)
-        canvas.drawText(message: String(x), size: 7, x: x, y: y)
-        canvas.drawText(message: String(y), size: 7, x: x, y: y-10)
-
+        
+        
+        if x + y <= 400 && x != 0 && x != 400 && y != 0  {
+            
+            canvas.fillColor = Color.white
+            canvas.drawEllipse(centreX: x, centreY: y, width: 35, height: 35)
+        }
+        
+        
         
     }
 }
 
-
+//for q in stride(from: 9, through: 1, by: -1){
+//    canvas.drawEllipse(centreX: <#T##Int#>, centreY: <#T##Int#>, width: <#T##Int#>, height: <#T##Int#>)
+//}
 
 //: ## Template code
 //: The code below is necessary to see the result of your work in the Assistant Editor at right. Please do not remove.
