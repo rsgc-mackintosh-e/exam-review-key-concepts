@@ -59,9 +59,27 @@ for x in stride(from: 0, through: 400, by: 40) {
     }
 }
 
-//for q in stride(from: 9, through: 1, by: -1){
-//    canvas.drawEllipse(centreX: <#T##Int#>, centreY: <#T##Int#>, width: <#T##Int#>, height: <#T##Int#>)
-//}
+////Write pixies
+canvas.drawText(message: "pixies", size: 75, x: 10, y: 410)
+
+//Write the date
+canvas.textColor = Color.black
+canvas.drawText(message: "saturday", size: 10, x: 20, y: 550)
+canvas.drawText(message: "december 13 1986", size: 10, x: 20, y: 535)
+canvas.drawText(message: "9 pm over 21", size: 10, x: 20, y: 520)
+
+//Write the location
+canvas.drawText(message: "at the rat", size: 10, x: 270, y: 550)
+canvas.drawText(message: "528 commonwealth", size: 10, x: 270, y: 535)
+canvas.drawText(message: "boston, mass.", size: 10, x: 270, y: 520)
+
+
+canvas.textColor = Color.white
+
+//Write the special events
+canvas.drawText(message: "with", size: 15, x: 270, y: 460)
+canvas.drawText(message: "throwing muses", size: 15, x: 270, y: 440)
+canvas.drawText(message: "big dipper", size: 15, x: 270, y: 420)
 
 //: ## Template code
 //: The code below is necessary to see the result of your work in the Assistant Editor at right. Please do not remove.
