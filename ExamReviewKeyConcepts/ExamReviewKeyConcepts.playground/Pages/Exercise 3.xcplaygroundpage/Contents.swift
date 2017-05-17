@@ -23,6 +23,23 @@ import PlaygroundSupport
 // Create a new canvas
 let canvas = Canvas(width: 400, height: 600)
 
+canvas.defaultLineWidth = 10
+
+canvas.fillColor = Color.init(hue: 339, saturation: 85, brightness: 91, alpha: 100)
+canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 0, width: 400, height: 600)
+
+
+for x in stride(from: 0, through: 140, by: 20){
+    for y in stride(from: 0, through: 140, by: 20){
+        
+        canvas.lineColor = Color.black
+        
+        canvas.drawLine(fromX: x, fromY: y, toX: x, toY: y)
+        
+        
+        
+    }
+}
 
 //: ## Template code
 //: The code below is necessary to see the result of your work in the Assistant Editor at right. Please do not remove.
