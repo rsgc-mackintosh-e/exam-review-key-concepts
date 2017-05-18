@@ -54,6 +54,21 @@ for x in stride(from: 0, through: 400, by: 40) {
             canvas.drawEllipse(centreX: x, centreY: y, width: 35, height: 35)
         }
         
+//        //Draw the small green circles
+//        if x + y <= 400 && x != 0 && x != 400 && y != 0  {
+//            
+//            canvas.fillColor = Color.init(hue: 121, saturation: 55, brightness: 73, alpha: 100)
+//            
+//            canvas.drawEllipse(centreX: x, centreY: y, width: 20, height: 20)
+//        }
+//        
+//        //Draw the small white circles
+//        if x + y >= 400 && x != 0 && x != 400 && y != 0 && y != 400 {
+//            
+//            canvas.fillColor = Color.white
+//            canvas.drawEllipse(centreX: x, centreY: y, width: 20, height: 20)
+//        
+//        }
         
         
     }
